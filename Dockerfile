@@ -10,11 +10,11 @@ RUN apt-get update \
 
 WORKDIR ${WORK_DIR}
 
-COPY package*.json ${WORK_DIR}
+COPY package*.json ${WORK_DIR}/
 
 RUN npm install
 
-COPY ./ ${WORK_DIR}
+COPY ./ ${WORK_DIR}/
 
 #RUN npm run test -- --browsers ChromeHeadlessNoSandbox --watch=false
 
